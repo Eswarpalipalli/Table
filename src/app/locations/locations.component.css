@@ -1,0 +1,49 @@
+.locationHead{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: auto;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: #3b82e9;
+    margin-top: 15px;
+}
+
+h1{
+    color: grey;
+    font-weight: 400;
+}
+
+.mainHeading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    gap: 10px;
+}
+
+.mainlist{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.locations{
+    gap: 10px;
+    border-radius: 10px;
+    background-color: grey;
+    height: 40px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}

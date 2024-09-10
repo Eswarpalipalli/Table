@@ -1,0 +1,57 @@
+<div class="main">
+    <div class="header">
+        <i class="ph ph-arrow-circle-left" style="font-size: 50px; cursor: pointer;"></i>
+        <h1 class="heading">BS Tower A | Basement OTS - Sequence Type Mapping to Locations</h1>
+        <div class="header-buttons">
+            <button class="btn" (click)="onSaveData()">Save</button>
+            <button class="btn" (click)="toggleAll(false)">Reset</button>
+        </div>
+    </div>
+    <div>
+        <hr style="color: grey">
+    </div>
+    <div class="mid">
+        <div class="left">
+            <div class="location">
+                <span class="spans" *ngFor="let location of locations ; let i = index" (click) = "onClick(i)" [ngClass]="{clicked : i === currId}">{{location}}</span>
+            </div>
+            <div style="height: 2px; background-color: #3e51b5"></div>
+        </div>
+        <div class="right">
+            <button class="mid-btn" (click)="onChange()"> <i class="ph ph-repeat"
+                    style="font-size: 20px;margin-right: 6px;"></i>Swap
+                Attributes And Matrices</button>
+        </div>
+    </div>
+</div>
+<!-- <table>
+    <tr *ngFor="let row of table; let i = index">
+        <td class="table-data" *ngFor="let col of row; let j = index" [ngClass]="{'headings' : i === 0 || j === 0}">
+            <label class="container">
+                <input type="checkbox" [checked]="onChecked(i,j)" (change)="onCheckChange(i,j,$event)">
+                <span class="checkmark"></span>
+                <span>{{col}}</span>
+            </label>
+        </td>
+    </tr>
+</table> -->
+<table class="table table-bordered">
+    <tbody>
+        <tr *ngFor="let row of table; let i = index">
+            <td class="table-data" *ngFor="let col of row; let j = index" [ngClass]="{'headings' : i === 0 || j === 0}">
+                <div class="distributed">
+                    <div class="box">
+                        <label class="container">
+                            <input type="checkbox" name={{col}} [checked]="onChecked(col)"
+                                (change)="onCheckChange(i,j,$event)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="content">
+                        <span>{{col}}</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
