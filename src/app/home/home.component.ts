@@ -116,6 +116,11 @@ export class HomeComponent implements OnInit {
     }
     this.data.reset();
   }
+
+  onReset():void{
+    window.location.reload();
+  }
+
   onSaveData(): void {
     for (let p = 0; p < this.locations.length; p++) {
       for (let i = 0; i < this.table.length; i++) {
