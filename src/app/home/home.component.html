@@ -24,17 +24,6 @@
         </div>
     </div>
 </div>
-<!-- <table>
-    <tr *ngFor="let row of table; let i = index">
-        <td class="table-data" *ngFor="let col of row; let j = index" [ngClass]="{'headings' : i === 0 || j === 0}">
-            <label class="container">
-                <input type="checkbox" [checked]="onChecked(i,j)" (change)="onCheckChange(i,j,$event)">
-                <span class="checkmark"></span>
-                <span>{{col}}</span>
-            </label>
-        </td>
-    </tr>
-</table> -->
 <table class="table table-bordered">
     <tbody>
         <tr *ngFor="let row of table; let i = index">

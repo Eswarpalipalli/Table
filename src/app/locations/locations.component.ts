@@ -14,7 +14,7 @@ export class LocationsComponent implements OnInit{
 
   ngOnInit(): void {
     this.taggedLocations = this.data.getData();
-    if(!this.taggedLocations.length){
+    if(!this.data.getSize()){
       this.route.navigate(['home']);
     }
   }

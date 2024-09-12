@@ -1,13 +1,20 @@
 <div class="locationHead">
-    <div class="header">
-        <span>Basement OTS</span>
-        <div style="height: 2px; background-color: #3e51b5"></div>
-    </div>
-    <div class="mainHeading">
-        <i class="ph ph-map-pin-line" style="font-size: 30px;"></i>
-        <h1>Locations Tagged To Basement-OTS</h1>
-    </div>
-    <ul *ngFor="let locations of taggedLocations" class="mainlist">
-        <li class="locations">{{locations}}</li>
-    </ul> 
+  <div class="header">
+    <span>Basement OTS</span>
+    <div style="height: 2px; background-color: #3e51b5"></div>
+  </div>
+  <div *ngFor="let location of taggedLocations" class="location-body">
+    <ng-container *ngIf="location[1].length">
+      <div class="mainHeading">
+        <i class="ph ph-map-pin-line" style="font-size: 30px"></i>
+        <h1>Locations Tagged To {{ location[0] }}</h1>
+      </div>
+      <div class="listi">
+        <ul *ngFor="let locations of location[1]">
+          <li>{{ locations }}</li>
+        </ul>
+      </div>
+      <hr>
+    </ng-container>
+  </div>
 </div>
